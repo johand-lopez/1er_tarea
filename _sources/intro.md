@@ -1,11 +1,15 @@
-# ENTREGABLE - ANALISIS EXPLORATORIO DE DATOS
+# Presentación del Ejercicio
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+### **Integrantes del Equipo**
+* [Johan David Diaz Lopez]
+* [Luis David Peñaranda Perez]
+* [Hector David Sanjuan Fabregas]
+* [Miguel Angel Lugo Cozzarelli]
 
-Check out the content pages bundled with this sample book to see more.
+### **Descripción del ejercicio**
+
+En este ejercicio tenemos como objetivo realizar un **Análisis Exploratorio de Datos (EDA)** sobre un dataset histórico de los precios de las acciones de las 500 empresas más grandes por capitalización de mercado. Nuestro objetivo es entender la estructura, calidad y patrones del conjunto de datos.
+
 
 ```{tableofcontents}
 ```
