@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Desarrollo del análisis exploratorio &#8212; Entregable - Eda</title>
+    <title>1. Configuración Inicial &#8212; Entregable - Eda</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Presentación del Ejercicio" href="intro.html" />
+    <link rel="prev" title="Primer entregable - Machine Learning" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,12 +174,16 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Presentación del Ejercicio
+                    Primer entregable - Machine Learning
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Desarrollo del análisis exploratorio</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>1. Configuración Inicial</strong></a></li>
+
+
+
+
 </ul>
 
     </div>
@@ -365,7 +369,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Desarrollo del análisis exploratorio</h1>
+    <h1>1. Configuración Inicial</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -375,14 +379,42 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#informacion-del-dataset"><strong>Información del Dataset</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#librerias-y-conjunto-de-datos">Librerías y conjunto de datos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descripcion-y-estructura-del-dataset">2. Descripción y Estructura del Dataset</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-valores-faltantes">3. Análisis de Valores Faltantes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-la-distribucion-de-variables-clave">4. Análisis de la Distribución de Variables Clave</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-bivariado-y-de-series-de-tiempo">5. Análisis Bivariado y de Series de Tiempo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusiones-del-eda">6. Conclusiones del EDA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>1. Configuración Inicial</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vista-preeliminar"><strong>2.1. Vista Preeliminar</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metadatos-y-tipos-de-datos"><strong>2.2. Metadatos y Tipos de Datos</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estadisticas-descriptivas"><strong>2.3. Estadísticas Descriptivas</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-faltantes"><strong>2.4. Valores Faltantes</strong></a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-univariado-completo"><strong>3. Análisis Univariado Completo</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-numericas-precios-y-volumen"><strong>3.1. Variables Numéricas (Precios y Volumen)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histogramas-y-densidad"><strong>Histogramas y Densidad</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplots"><strong>Boxplots</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-volumen"><strong>Análisis de Volumen</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-especiales-dividendos-y-splits"><strong>3.2. Variables Especiales (Dividendos y Splits)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-dividendos"><strong>Análisis de Dividendos</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-stock-splits"><strong>Análisis de Stock Splits</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-categorica-company"><strong>3.3. Variable Categórica (Company)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-multivariado-completo"><strong>4. Análisis Multivariado Completo</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlaciones-entre-variables"><strong>4.1. Correlaciones entre Variables</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-valores-atipicos"><strong>5. Análisis de Valores Atípicos</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deteccion-con-metodo-estadistico"><strong>5.1. Detección con Método Estadístico</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusiones-y-recomendaciones"><strong>6. Conclusiones y Recomendaciones</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hallazgos-clave"><strong>Hallazgos Clave</strong></a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -393,80 +425,63 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="desarrollo-del-analisis-exploratorio">
-<h1><strong>Desarrollo del análisis exploratorio</strong><a class="headerlink" href="#desarrollo-del-analisis-exploratorio" title="Link to this heading">#</a></h1>
-<section id="informacion-del-dataset">
-<h2><strong>Información del Dataset</strong><a class="headerlink" href="#informacion-del-dataset" title="Link to this heading">#</a></h2>
-<p><strong>Título:</strong> Precios de las acciones de las 500 empresas más grandes por capitalización de mercado (últimos 5 años)</p>
-<p><strong>Fuente:</strong> Datos históricos extraídos de Yahoo Finance.</p>
-<p><strong>Resumen:</strong> El conjunto de datos comprende registros diarios de métricas de rendimiento de acciones para las 500 principales empresas a lo largo de un período de cinco años.</p>
-<p><strong>Variables de Dataset:</strong></p>
-<ul class="simple">
-<li><p><strong>Fecha:</strong> Fecha del registro bursátil.</p></li>
-<li><p><strong>Abrir:</strong> Precio de apertura de la acción.</p></li>
-<li><p><strong>Alto:</strong> Precio más alto del día.</p></li>
-<li><p><strong>Bajo:</strong> Precio más bajo del día.</p></li>
-<li><p><strong>Cerrar:</strong> Precio de cierre de la acción.</p></li>
-<li><p><strong>Volumen:</strong> Volumen de acciones negociadas.</p></li>
-<li><p><strong>Dividendos:</strong> Pagos de dividendos (si aplica).</p></li>
-<li><p><strong>Divisiones de acciones:</strong> Información sobre divisiones de acciones (si aplica).</p></li>
-<li><p><strong>Compañía:</strong> Símbolo de cotización de la empresa.</p></li>
-</ul>
-</section>
-<section id="librerias-y-conjunto-de-datos">
-<h2>Librerías y conjunto de datos<a class="headerlink" href="#librerias-y-conjunto-de-datos" title="Link to this heading">#</a></h2>
-<p>En esta sección se realizará la importación de las librerías necesarias y la carga del conjunto de datos que se utilizará en el análisis exploratorio.</p>
+  <section id="configuracion-inicial">
+<h1><strong>1. Configuración Inicial</strong><a class="headerlink" href="#configuracion-inicial" title="Link to this heading">#</a></h1>
+<p><strong>Propósito</strong>: Preparar el entorno de análisis importando las librerías necesarias y configurando parámetros de visualización.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importar librerías</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Librerías esenciales para análisis de datos y visualización</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
 
-<span class="c1"># Configuración de visualizaciones</span>
+<span class="c1"># Configuración de estilos y parámetros de visualización</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_palette</span><span class="p">(</span><span class="s2">&quot;husl&quot;</span><span class="p">)</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;whitegrid&#39;</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">set_palette</span><span class="p">(</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>  <span class="c1"># Mostrar todas las columnas</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.float_format&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>  <span class="c1"># Formato para números float</span>
 
-<span class="c1"># Cargar el dataset desde la ruta especificada</span>
-<span class="c1"># La ruta es &#39;datos/stock_details_5_years.csv&#39;</span>
+<span class="c1"># Carga de datos con manejo de errores</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">johan</span><span class="se">\\</span><span class="s1">OneDrive - Universidad del Norte</span><span class="se">\\</span><span class="s1">Escritorio</span><span class="se">\\</span><span class="s1">MachineLearning</span><span class="se">\\</span><span class="s1">1er_tarea</span><span class="se">\\</span><span class="s1">datos</span><span class="se">\\</span><span class="s1">stock_details_5_years.csv&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dataset cargado correctamente.&quot;</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: Asegúrate de que el archivo &#39;stock_details_5_years.csv&#39; esté en la carpeta &#39;datos&#39;.&quot;</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\johan\OneDrive - Universidad del Norte\Escritorio\MachineLearning\1er_tarea\datos\stock_details_5_years.csv&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Datos cargados exitosamente&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📊 Dimensiones del dataset: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> filas × </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> columnas&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Error al cargar los datos: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dataset cargado correctamente.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\AppData\Local\Temp\ipykernel_35980\3386856796.py:9: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as &#39;seaborn-v0_8-&lt;style&gt;&#39;. Alternatively, directly use the seaborn API instead.
+  plt.style.use(&#39;seaborn&#39;)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ Datos cargados exitosamente
+📊 Dimensiones del dataset: 602962 filas × 9 columnas
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="descripcion-y-estructura-del-dataset">
-<h2>2. Descripción y Estructura del Dataset<a class="headerlink" href="#descripcion-y-estructura-del-dataset" title="Link to this heading">#</a></h2>
-<p>En esta sección, obtendremos una visión de alto nivel del dataset para entender su forma, tipos de datos y la presencia de valores. Describiremos cada una de las variables del conjunto de datos.</p>
+<p><strong>2. Análisis Inicial del Dataset</strong>
+<strong>Propósito</strong>: Realizar una primera exploración para entender la estructura básica, tipos de datos y completitud de la información.</p>
+<section id="vista-preeliminar">
+<h2><strong>2.1. Vista Preeliminar</strong><a class="headerlink" href="#vista-preeliminar" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo</strong>: Examinar las primeras y últimas filas para identificar formato y contenido.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mostrar las primeras 5 filas para una vista previa</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Primeras 5 filas del DataFrame ---&quot;</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🔍 Primeras 3 filas del dataset:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 
-<span class="c1"># Obtener información general del DataFrame (tipos de datos, conteo de no-nulos)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Información general del DataFrame ---&quot;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-
-<span class="c1"># Estadísticas descriptivas para las variables numéricas</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Estadísticas descriptivas de las variables numéricas ---&quot;</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🔍 Últimas 3 filas del dataset:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Primeras 5 filas del DataFrame ---
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🔍 Primeras 3 filas del dataset:
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -502,66 +517,127 @@ document.write(`
     <tr>
       <th>0</th>
       <td>2018-11-29 00:00:00-05:00</td>
-      <td>43.829761</td>
-      <td>43.863354</td>
-      <td>42.639594</td>
-      <td>43.083508</td>
+      <td>43.83</td>
+      <td>43.86</td>
+      <td>42.64</td>
+      <td>43.08</td>
       <td>167080000</td>
       <td>0.00</td>
-      <td>0.0</td>
+      <td>0.00</td>
       <td>AAPL</td>
     </tr>
     <tr>
       <th>1</th>
       <td>2018-11-29 00:00:00-05:00</td>
-      <td>104.769074</td>
-      <td>105.519257</td>
-      <td>103.534595</td>
-      <td>104.636131</td>
+      <td>104.77</td>
+      <td>105.52</td>
+      <td>103.53</td>
+      <td>104.64</td>
       <td>28123200</td>
       <td>0.00</td>
-      <td>0.0</td>
+      <td>0.00</td>
       <td>MSFT</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2018-11-29 00:00:00-05:00</td>
-      <td>54.176498</td>
-      <td>55.007500</td>
-      <td>54.099998</td>
-      <td>54.729000</td>
+      <td>54.18</td>
+      <td>55.01</td>
+      <td>54.10</td>
+      <td>54.73</td>
       <td>31004000</td>
       <td>0.00</td>
-      <td>0.0</td>
-      <td>GOOGL</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2018-11-29 00:00:00-05:00</td>
-      <td>83.749496</td>
-      <td>84.499496</td>
-      <td>82.616501</td>
-      <td>83.678497</td>
-      <td>132264000</td>
       <td>0.00</td>
-      <td>0.0</td>
-      <td>AMZN</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2018-11-29 00:00:00-05:00</td>
-      <td>39.692784</td>
-      <td>40.064904</td>
-      <td>38.735195</td>
-      <td>39.037853</td>
-      <td>54917200</td>
-      <td>0.04</td>
-      <td>0.0</td>
-      <td>NVDA</td>
+      <td>GOOGL</td>
     </tr>
   </tbody>
 </table>
-</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Información general del DataFrame ---
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🔍 Últimas 3 filas del dataset:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Dividends</th>
+      <th>Stock Splits</th>
+      <th>Company</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>602959</th>
+      <td>2023-11-29 00:00:00-05:00</td>
+      <td>75.94</td>
+      <td>76.56</td>
+      <td>75.26</td>
+      <td>75.61</td>
+      <td>298699</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>IFF</td>
+    </tr>
+    <tr>
+      <th>602960</th>
+      <td>2023-11-29 00:00:00-05:00</td>
+      <td>45.23</td>
+      <td>45.26</td>
+      <td>44.04</td>
+      <td>44.21</td>
+      <td>2217579</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>CCJ</td>
+    </tr>
+    <tr>
+      <th>602961</th>
+      <td>2023-11-29 00:00:00-05:00</td>
+      <td>84.63</td>
+      <td>85.00</td>
+      <td>83.53</td>
+      <td>83.89</td>
+      <td>830092</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>LYV</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="metadatos-y-tipos-de-datos">
+<h2><strong>2.2. Metadatos y Tipos de Datos</strong><a class="headerlink" href="#metadatos-y-tipos-de-datos" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo</strong>: Verificar la estructura de los datos y tipos de variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📝 Información de metadatos:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📝 Información de metadatos:
 &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 RangeIndex: 602962 entries, 0 to 602961
 Data columns (total 9 columns):
@@ -578,8 +654,29 @@ Data columns (total 9 columns):
  8   Company       602962 non-null  object 
 dtypes: float64(6), int64(1), object(2)
 memory usage: 41.4+ MB
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="estadisticas-descriptivas">
+<h2><strong>2.3. Estadísticas Descriptivas</strong><a class="headerlink" href="#estadisticas-descriptivas" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo</strong>: Obtener medidas estadísticas básicas para todas las variables numéricas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📈 Estadísticas descriptivas para variables numéricas:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">])</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 
---- Estadísticas descriptivas de las variables numéricas ---
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📊 Estadísticas para variables categóricas:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;object&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📈 Estadísticas descriptivas para variables numéricas:
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -600,129 +697,160 @@ memory usage: 41.4+ MB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Open</th>
-      <th>High</th>
-      <th>Low</th>
-      <th>Close</th>
-      <th>Volume</th>
-      <th>Dividends</th>
-      <th>Stock Splits</th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <th>Open</th>
+      <td>602962.00</td>
+      <td>140.07</td>
+      <td>275.40</td>
+      <td>1.05</td>
+      <td>39.57</td>
+      <td>79.18</td>
+      <td>157.84</td>
+      <td>6490.26</td>
+    </tr>
+    <tr>
+      <th>High</th>
+      <td>602962.00</td>
+      <td>141.85</td>
+      <td>279.00</td>
+      <td>1.06</td>
+      <td>40.06</td>
+      <td>80.13</td>
+      <td>159.75</td>
+      <td>6525.00</td>
+    </tr>
+    <tr>
+      <th>Low</th>
+      <td>602962.00</td>
+      <td>138.28</td>
+      <td>271.90</td>
+      <td>1.03</td>
+      <td>39.06</td>
+      <td>78.19</td>
+      <td>155.84</td>
+      <td>6405.00</td>
+    </tr>
+    <tr>
+      <th>Close</th>
+      <td>602962.00</td>
+      <td>140.10</td>
+      <td>275.48</td>
+      <td>1.03</td>
+      <td>39.56</td>
+      <td>79.18</td>
+      <td>157.85</td>
+      <td>6509.35</td>
+    </tr>
+    <tr>
+      <th>Volume</th>
+      <td>602962.00</td>
+      <td>5895601.18</td>
+      <td>13815961.83</td>
+      <td>0.00</td>
+      <td>1031500.00</td>
+      <td>2228700.00</td>
+      <td>5277400.00</td>
+      <td>1123003300.00</td>
+    </tr>
+    <tr>
+      <th>Dividends</th>
+      <td>602962.00</td>
+      <td>0.01</td>
+      <td>0.12</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>35.00</td>
+    </tr>
+    <tr>
+      <th>Stock Splits</th>
+      <td>602962.00</td>
+      <td>0.00</td>
+      <td>0.05</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>20.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📊 Estadísticas para variables categóricas:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
       <th>count</th>
-      <td>602962.000000</td>
-      <td>602962.000000</td>
-      <td>602962.000000</td>
-      <td>602962.000000</td>
-      <td>6.029620e+05</td>
-      <td>602962.00000</td>
-      <td>602962.000000</td>
+      <th>unique</th>
+      <th>top</th>
+      <th>freq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Date</th>
+      <td>602962</td>
+      <td>1258</td>
+      <td>2023-11-29 00:00:00-05:00</td>
+      <td>491</td>
     </tr>
     <tr>
-      <th>mean</th>
-      <td>140.074711</td>
-      <td>141.853492</td>
-      <td>138.276316</td>
-      <td>140.095204</td>
-      <td>5.895601e+06</td>
-      <td>0.00731</td>
-      <td>0.000344</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>275.401725</td>
-      <td>279.003191</td>
-      <td>271.895276</td>
-      <td>275.477969</td>
-      <td>1.381596e+07</td>
-      <td>0.12057</td>
-      <td>0.050607</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.052425</td>
-      <td>1.061195</td>
-      <td>1.026114</td>
-      <td>1.034884</td>
-      <td>0.000000e+00</td>
-      <td>0.00000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>39.566159</td>
-      <td>40.056222</td>
-      <td>39.058151</td>
-      <td>39.563746</td>
-      <td>1.031500e+06</td>
-      <td>0.00000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>79.177964</td>
-      <td>80.125563</td>
-      <td>78.193820</td>
-      <td>79.177906</td>
-      <td>2.228700e+06</td>
-      <td>0.00000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>157.837190</td>
-      <td>159.746317</td>
-      <td>155.841609</td>
-      <td>157.847153</td>
-      <td>5.277400e+06</td>
-      <td>0.00000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>6490.259766</td>
-      <td>6525.000000</td>
-      <td>6405.000000</td>
-      <td>6509.350098</td>
-      <td>1.123003e+09</td>
-      <td>35.00000</td>
-      <td>20.000000</td>
+      <th>Company</th>
+      <td>602962</td>
+      <td>491</td>
+      <td>AAPL</td>
+      <td>1258</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
 </section>
-<section id="analisis-de-valores-faltantes">
-<h2>3. Análisis de Valores Faltantes<a class="headerlink" href="#analisis-de-valores-faltantes" title="Link to this heading">#</a></h2>
-<p>Este es un punto crucial del EDA. Aquí cuantificaremos la extensión de los valores nulos para entender la calidad de los datos, sin realizar ninguna modificación.</p>
+<section id="valores-faltantes">
+<h2><strong>2.4. Valores Faltantes</strong><a class="headerlink" href="#valores-faltantes" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo</strong>: Cuantificar y analizar datos faltantes en el dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calcular el conteo y porcentaje de valores nulos por columna</span>
-<span class="n">valores_nulos</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">porcentaje_nulos</span> <span class="o">=</span> <span class="p">(</span><span class="n">valores_nulos</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
-
-<span class="c1"># Crear un DataFrame para visualizar los nulos de manera clara</span>
-<span class="n">df_nulos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Valores Nulos&#39;</span><span class="p">:</span> <span class="n">valores_nulos</span><span class="p">,</span> <span class="s1">&#39;Porcentaje&#39;</span><span class="p">:</span> <span class="n">porcentaje_nulos</span><span class="p">})</span>
-<span class="n">df_nulos</span> <span class="o">=</span> <span class="n">df_nulos</span><span class="p">[</span><span class="n">df_nulos</span><span class="p">[</span><span class="s1">&#39;Valores Nulos&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Valores Nulos&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Conteo y Porcentaje de Valores Faltantes por Columna ---&quot;</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">df_nulos</span><span class="p">)</span>
-
-<span class="c1"># Visualizar la presencia de valores faltantes usando un mapa de calor</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mapa de Calor de Valores Faltantes&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Columnas&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Entradas&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🧐 Análisis de valores faltantes:&quot;</span><span class="p">)</span>
+<span class="n">missing_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Valores_Nulos&#39;</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="s1">&#39;Porcentaje_Nulos&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s1">&#39;Tipo_Dato&#39;</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="p">})</span>
+<span class="n">display</span><span class="p">(</span><span class="n">missing_data</span><span class="p">[</span><span class="n">missing_data</span><span class="p">[</span><span class="s1">&#39;Valores_Nulos&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Porcentaje_Nulos&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Conteo y Porcentaje de Valores Faltantes por Columna ---
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🧐 Análisis de valores faltantes:
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -743,80 +871,257 @@ memory usage: 41.4+ MB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Valores Nulos</th>
-      <th>Porcentaje</th>
+      <th>Valores_Nulos</th>
+      <th>Porcentaje_Nulos</th>
+      <th>Tipo_Dato</th>
     </tr>
   </thead>
   <tbody>
   </tbody>
 </table>
-</div></div><img alt="_images/1b97bc1569f74be328e8461426545e14e773e009bd19c3a5b39c8a639d948495.png" src="_images/1b97bc1569f74be328e8461426545e14e773e009bd19c3a5b39c8a639d948495.png" />
-</div>
+</div></div></div>
 </div>
 </section>
-<section id="analisis-de-la-distribucion-de-variables-clave">
-<h2>4. Análisis de la Distribución de Variables Clave<a class="headerlink" href="#analisis-de-la-distribucion-de-variables-clave" title="Link to this heading">#</a></h2>
-<p>En esta sección, nos centraremos en las variables numéricas más importantes para entender cómo se distribuyen sus valores.</p>
+</section>
+<section id="analisis-univariado-completo">
+<h1><strong>3. Análisis Univariado Completo</strong><a class="headerlink" href="#analisis-univariado-completo" title="Link to this heading">#</a></h1>
+<p><strong>Propósito</strong>: Analizar en profundidad cada variable individualmente.</p>
+<section id="variables-numericas-precios-y-volumen">
+<h2><strong>3.1. Variables Numéricas (Precios y Volumen)</strong><a class="headerlink" href="#variables-numericas-precios-y-volumen" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo</strong>: Examinar distribuciones, tendencia central y dispersión.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Histograma para el precio de cierre (`Close`)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribución del Precio de Cierre de las Acciones&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Precio de Cierre (USD)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Boxplot para identificar valores atípicos en el precio de cierre</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightpink&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Boxplot del Precio de Cierre&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Precio de Cierre (USD)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Histograma para el volumen (`Volume`)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Volume&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribución del Volumen de Transacciones&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Volumen&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Análisis de la variable categórica `Company`</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Top 10 empresas con más registros ---&quot;</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Company&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Company&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Top 10 Empresas por Número de Registros&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Símbolo de la Compañía&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Número de Registros&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lista de variables de precio</span>
+<span class="n">price_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Open&#39;</span><span class="p">,</span> <span class="s1">&#39;High&#39;</span><span class="p">,</span> <span class="s1">&#39;Low&#39;</span><span class="p">,</span> <span class="s1">&#39;Close&#39;</span><span class="p">]</span>
+<span class="n">volume_col</span> <span class="o">=</span> <span class="s1">&#39;Volume&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="histogramas-y-densidad">
+<h3><strong>Histogramas y Densidad</strong><a class="headerlink" href="#histogramas-y-densidad" title="Link to this heading">#</a></h3>
+<p><strong>Propósito</strong>: Visualizar la distribución de frecuencias de cada variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📊 Distribución de variables de precio:&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">price_cols</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Distribución de </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Precio (USD)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📊 Distribución de variables de precio:
+</pre></div>
+</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
   if pd.api.types.is_categorical_dtype(vector):
 C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
   with pd.option_context(&#39;mode.use_inf_as_na&#39;, True):
 </pre></div>
 </div>
-<img alt="_images/42bf0ad0045901ff0fcd6db8502777a83f7bf418e032e5288495305672a7c2a3.png" src="_images/42bf0ad0045901ff0fcd6db8502777a83f7bf418e032e5288495305672a7c2a3.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-</pre></div>
-</div>
-<img alt="_images/8f16dabba73a8bf01f17eb1be7fb2417c71129ff644aa989731cb2a03ca28c92.png" src="_images/8f16dabba73a8bf01f17eb1be7fb2417c71129ff644aa989731cb2a03ca28c92.png" />
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
   if pd.api.types.is_categorical_dtype(vector):
 C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
   with pd.option_context(&#39;mode.use_inf_as_na&#39;, True):
 </pre></div>
 </div>
-<img alt="_images/722abf980d2e52d138c7706a38ff6733e9de3c120e22d91d820101eb01d94c84.png" src="_images/722abf980d2e52d138c7706a38ff6733e9de3c120e22d91d820101eb01d94c84.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Top 10 empresas con más registros ---
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context(&#39;mode.use_inf_as_na&#39;, True):
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context(&#39;mode.use_inf_as_na&#39;, True):
+</pre></div>
+</div>
+<img alt="_images/026aef7433926e92804333bede5b392e2c78f1efbd459470f9ba60e2b5e9dfaf.png" src="_images/026aef7433926e92804333bede5b392e2c78f1efbd459470f9ba60e2b5e9dfaf.png" />
+</div>
+</div>
+</section>
+<section id="boxplots">
+<h3><strong>Boxplots</strong><a class="headerlink" href="#boxplots" title="Link to this heading">#</a></h3>
+<p><strong>Propósito</strong>: Identificar valores atípicos y rango intercuartílico.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📦 Diagramas de caja para precios:&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">price_cols</span><span class="p">],</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;Set2&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribución de precios (Boxplot)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Precio (USD)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📦 Diagramas de caja para precios:
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+</pre></div>
+</div>
+<img alt="_images/df272b405ad86b0e80fb950ebaadcecc8b58c2803b56a94654b2f411295f0672.png" src="_images/df272b405ad86b0e80fb950ebaadcecc8b58c2803b56a94654b2f411295f0672.png" />
+</div>
+</div>
+</section>
+<section id="analisis-de-volumen">
+<h3><strong>Análisis de Volumen</strong><a class="headerlink" href="#analisis-de-volumen" title="Link to this heading">#</a></h3>
+<p><strong>Propósito</strong>: Examinar la distribución del volumen de operaciones.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📈 Análisis de volumen de operaciones:&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Histograma</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">volume_col</span><span class="p">],</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Distribución de Volume&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Volumen&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># Boxplot</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">volume_col</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Boxplot de Volume&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Volumen&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📈 Análisis de volumen de operaciones:
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context(&#39;mode.use_inf_as_na&#39;, True):
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+</pre></div>
+</div>
+<img alt="_images/7e5c0461a36b94664e8ce3728e266a7585c9f087c540e0e468a94f68ad5aed79.png" src="_images/7e5c0461a36b94664e8ce3728e266a7585c9f087c540e0e468a94f68ad5aed79.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="variables-especiales-dividendos-y-splits">
+<h2><strong>3.2. Variables Especiales (Dividendos y Splits)</strong><a class="headerlink" href="#variables-especiales-dividendos-y-splits" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo</strong>: Analizar eventos corporativos poco frecuentes.</p>
+<section id="analisis-de-dividendos">
+<h3><strong>Análisis de Dividendos</strong><a class="headerlink" href="#analisis-de-dividendos" title="Link to this heading">#</a></h3>
+<p><strong>Propósito</strong>: Examinar distribución y frecuencia de pagos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">💰 Análisis de Dividendos:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total de registros con dividendos: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dividends&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Porcentaje de registros con dividendos: </span><span class="si">{</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dividends&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dividends&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Dividends&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gold&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribución de Dividendos (Valores &gt; 0)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Monto de Dividendos&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>💰 Análisis de Dividendos:
+Total de registros con dividendos: 6857
+Porcentaje de registros con dividendos: 1.14%
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context(&#39;mode.use_inf_as_na&#39;, True):
+</pre></div>
+</div>
+<img alt="_images/4c4d350addbdb01009ef4b385f71731d73f8677e999c725114a144d8503397f5.png" src="_images/4c4d350addbdb01009ef4b385f71731d73f8677e999c725114a144d8503397f5.png" />
+</div>
+</div>
+</section>
+<section id="analisis-de-stock-splits">
+<h3><strong>Análisis de Stock Splits</strong><a class="headerlink" href="#analisis-de-stock-splits" title="Link to this heading">#</a></h3>
+<p><strong>Propósito</strong>: Evaluar frecuencia y magnitud de splits.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📊 Análisis de Stock Splits:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total de registros con splits: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stock Splits&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Porcentaje de registros con splits: </span><span class="si">{</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stock Splits&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stock Splits&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Stock Splits&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribución de Stock Splits (Valores &gt; 0)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Ratio de Split&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📊 Análisis de Stock Splits:
+Total de registros con splits: 71
+Porcentaje de registros con splits: 0.01%
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context(&#39;mode.use_inf_as_na&#39;, True):
+</pre></div>
+</div>
+<img alt="_images/1326fe2c9854efd234fbbc0afed389ecc01b834fe34d2cb9010a2dcffd30668e.png" src="_images/1326fe2c9854efd234fbbc0afed389ecc01b834fe34d2cb9010a2dcffd30668e.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="variable-categorica-company">
+<h2><strong>3.3. Variable Categórica (Company)</strong><a class="headerlink" href="#variable-categorica-company" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo</strong>: Analizar distribución de empresas en el dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🏢 Análisis de empresas:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Número total de empresas únicas: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Company&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Top 10 empresas con más registros</span>
+<span class="n">top_companies</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Company&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🔝 Top 10 empresas con más registros:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">top_companies</span><span class="p">)</span>
+
+<span class="c1"># Visualización</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">top_companies</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">top_companies</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;rocket&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Top 10 empresas con más registros&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Número de registros&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Empresa&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🏢 Análisis de empresas:
+Número total de empresas únicas: 491
+
+🔝 Top 10 empresas con más registros:
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Company
@@ -833,65 +1138,180 @@ LYG     1258
 Name: count, dtype: int64
 </pre></div>
 </div>
-<img alt="_images/072f4e760a074f86c1ad4766a9f3706896711c63f68c0c241e63c856a603e18e.png" src="_images/072f4e760a074f86c1ad4766a9f3706896711c63f68c0c241e63c856a603e18e.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+</pre></div>
+</div>
+<img alt="_images/aecb4bad009cbe340bd78146e9440f7dae0d0563360518371e03f2653b57b32b.png" src="_images/aecb4bad009cbe340bd78146e9440f7dae0d0563360518371e03f2653b57b32b.png" />
 </div>
 </div>
 </section>
-<section id="analisis-bivariado-y-de-series-de-tiempo">
-<h2>5. Análisis Bivariado y de Series de Tiempo<a class="headerlink" href="#analisis-bivariado-y-de-series-de-tiempo" title="Link to this heading">#</a></h2>
-<p>Aquí investigaremos la relación entre variables y su evolución en el tiempo.</p>
+</section>
+<section id="analisis-multivariado-completo">
+<h1><strong>4. Análisis Multivariado Completo</strong><a class="headerlink" href="#analisis-multivariado-completo" title="Link to this heading">#</a></h1>
+<p><strong>Propósito</strong>: Explorar relaciones entre múltiples variables.</p>
+<section id="correlaciones-entre-variables">
+<h2><strong>4.1. Correlaciones entre Variables</strong><a class="headerlink" href="#correlaciones-entre-variables" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo</strong>: Identificar relaciones lineales entre variables numéricas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matriz de correlación de variables numéricas</span>
-<span class="c1"># Se excluyen las variables con muchos nulos para un análisis más limpio</span>
-<span class="n">variables_numericas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Open&#39;</span><span class="p">,</span> <span class="s1">&#39;High&#39;</span><span class="p">,</span> <span class="s1">&#39;Low&#39;</span><span class="p">,</span> <span class="s1">&#39;Close&#39;</span><span class="p">,</span> <span class="s1">&#39;Volume&#39;</span><span class="p">]</span>
-<span class="n">correlacion</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">variables_numericas</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Selección de variables numéricas</span>
+<span class="n">numeric_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Open&#39;</span><span class="p">,</span> <span class="s1">&#39;High&#39;</span><span class="p">,</span> <span class="s1">&#39;Low&#39;</span><span class="p">,</span> <span class="s1">&#39;Close&#39;</span><span class="p">,</span> <span class="s1">&#39;Volume&#39;</span><span class="p">,</span> <span class="s1">&#39;Dividends&#39;</span><span class="p">,</span> <span class="s1">&#39;Stock Splits&#39;</span><span class="p">]</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">correlacion</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.2f&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Matriz de Correlación de Precios y Volumen&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># Matriz de correlación</span>
+<span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">numeric_cols</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 
-<span class="c1"># Para el análisis de series de tiempo, primero convertimos la columna `Date`</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span>
-<span class="c1"># Y ordenamos los datos para que el gráfico de series de tiempo sea correcto</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Company&#39;</span><span class="p">,</span> <span class="s1">&#39;Date&#39;</span><span class="p">])</span>
-
-<span class="c1"># Seleccionamos 5 empresas aleatorias para visualizar su desempeño</span>
-<span class="n">empresas_aleatorias</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Company&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">(),</span> <span class="mi">5</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">company</span> <span class="ow">in</span> <span class="n">empresas_aleatorias</span><span class="p">:</span>
-    <span class="c1"># Filtramos los datos por cada empresa seleccionada</span>
-    <span class="n">df_empresa</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Company&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">company</span><span class="p">]</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_empresa</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span> <span class="n">df_empresa</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">company</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Tendencia del Precio de Cierre para 5 Empresas Aleatorias (Últimos 5 años)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Fecha&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Precio de Cierre (USD)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Heatmap de correlaciones</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr_matrix</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;.2f&#39;</span><span class="p">,</span> 
+            <span class="n">annot_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">},</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Matriz de Correlación&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/a93594d61a1edae714f98176a4e67447de418c3ef0bca91a06a44228861a66bc.png" src="_images/a93594d61a1edae714f98176a4e67447de418c3ef0bca91a06a44228861a66bc.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\AppData\Local\Temp\ipykernel_35828\3217971710.py:12: FutureWarning: In a future version of pandas, parsing datetimes with mixed time zones will raise a warning unless `utc=True`. Please specify `utc=True` to opt in to the new behaviour and silence this warning. To create a `Series` with mixed offsets and `object` dtype, please use `apply` and `datetime.datetime.strptime`
-  df[&#39;Date&#39;] = pd.to_datetime(df[&#39;Date&#39;])
-</pre></div>
-</div>
-<img alt="_images/d59f0294a0f3ee05d02a71d69e804b6ff2f40fc46839add440fb5bc5d349ce1f.png" src="_images/d59f0294a0f3ee05d02a71d69e804b6ff2f40fc46839add440fb5bc5d349ce1f.png" />
+<img alt="_images/d6c7a80d1586baea3e99fdcaca1573408f2f6754e2c7a31b3b4203462c4bf2ab.png" src="_images/d6c7a80d1586baea3e99fdcaca1573408f2f6754e2c7a31b3b4203462c4bf2ab.png" />
 </div>
 </div>
 </section>
-<section id="conclusiones-del-eda">
-<h2>6. Conclusiones del EDA<a class="headerlink" href="#conclusiones-del-eda" title="Link to this heading">#</a></h2>
+</section>
+<section id="analisis-de-valores-atipicos">
+<h1><strong>5. Análisis de Valores Atípicos</strong><a class="headerlink" href="#analisis-de-valores-atipicos" title="Link to this heading">#</a></h1>
+<p><strong>Propósito</strong>: Identificar y evaluar valores extremos en el dataset.</p>
+<section id="deteccion-con-metodo-estadistico">
+<h2><strong>5.1. Detección con Método Estadístico</strong><a class="headerlink" href="#deteccion-con-metodo-estadistico" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo</strong>: Usar el rango intercuartílico (IQR) para identificar outliers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Función para detectar outliers</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">detect_outliers</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">columns</span><span class="p">):</span>
+    <span class="n">outlier_stats</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
+        <span class="n">Q1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+        <span class="n">Q3</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+        <span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
+        <span class="n">lower_bound</span> <span class="o">=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
+        <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
+        <span class="n">outliers</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower_bound</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper_bound</span><span class="p">)][</span><span class="n">col</span><span class="p">]</span>
+        
+        <span class="n">outlier_stats</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Límite_Inferior&#39;</span><span class="p">:</span> <span class="n">lower_bound</span><span class="p">,</span>
+            <span class="s1">&#39;Límite_Superior&#39;</span><span class="p">:</span> <span class="n">upper_bound</span><span class="p">,</span>
+            <span class="s1">&#39;Número_Outliers&#39;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">outliers</span><span class="p">),</span>
+            <span class="s1">&#39;Porcentaje_Outliers&#39;</span><span class="p">:</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">outliers</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s1">&#39;Outlier_Mínimo&#39;</span><span class="p">:</span> <span class="n">outliers</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">outliers</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+            <span class="s1">&#39;Outlier_Máximo&#39;</span><span class="p">:</span> <span class="n">outliers</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">outliers</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="p">}</span>
+    <span class="k">return</span> <span class="n">outlier_stats</span><span class="o">.</span><span class="n">T</span>
+
+<span class="c1"># Aplicar a variables de precio</span>
+<span class="n">outlier_analysis</span> <span class="o">=</span> <span class="n">detect_outliers</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">price_cols</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🔍 Análisis de Outliers (Método IQR):&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">outlier_analysis</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🔍 Análisis de Outliers (Método IQR):
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Límite_Inferior</th>
+      <th>Límite_Superior</th>
+      <th>Número_Outliers</th>
+      <th>Porcentaje_Outliers</th>
+      <th>Outlier_Mínimo</th>
+      <th>Outlier_Máximo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Open</th>
+      <td>-137.84</td>
+      <td>335.24</td>
+      <td>42159.00</td>
+      <td>6.99</td>
+      <td>335.24</td>
+      <td>6490.26</td>
+    </tr>
+    <tr>
+      <th>High</th>
+      <td>-139.48</td>
+      <td>339.28</td>
+      <td>42238.00</td>
+      <td>7.01</td>
+      <td>339.29</td>
+      <td>6525.00</td>
+    </tr>
+    <tr>
+      <th>Low</th>
+      <td>-136.12</td>
+      <td>331.02</td>
+      <td>42134.00</td>
+      <td>6.99</td>
+      <td>331.02</td>
+      <td>6405.00</td>
+    </tr>
+    <tr>
+      <th>Close</th>
+      <td>-137.86</td>
+      <td>335.27</td>
+      <td>42173.00</td>
+      <td>6.99</td>
+      <td>335.27</td>
+      <td>6509.35</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="conclusiones-y-recomendaciones">
+<h1><strong>6. Conclusiones y Recomendaciones</strong><a class="headerlink" href="#conclusiones-y-recomendaciones" title="Link to this heading">#</a></h1>
+<p><strong>Propósito</strong>: Sintetizar hallazgos clave y sugerir próximos pasos.</p>
+<section id="hallazgos-clave">
+<h2><strong>Hallazgos Clave</strong><a class="headerlink" href="#hallazgos-clave" title="Link to this heading">#</a></h2>
+<p><strong>1. Estructura del Dataset</strong>:</p>
 <ul class="simple">
-<li><p><strong>Calidad de los datos:</strong> Se identificaron valores faltantes en las columnas <code class="docutils literal notranslate"><span class="pre">Dividends</span></code> y <code class="docutils literal notranslate"><span class="pre">Stock</span> <span class="pre">Splits</span></code>, lo cual es una característica inherente a los datos de este tipo.</p></li>
-<li><p><strong>Estructura de los datos:</strong> El dataset está bien estructurado. Las variables de precio (<code class="docutils literal notranslate"><span class="pre">Open</span></code>, <code class="docutils literal notranslate"><span class="pre">High</span></code>, <code class="docutils literal notranslate"><span class="pre">Low</span></code>, <code class="docutils literal notranslate"><span class="pre">Close</span></code>) y <code class="docutils literal notranslate"><span class="pre">Volume</span></code> están listas para el análisis. La variable <code class="docutils literal notranslate"><span class="pre">Date</span></code> es de tipo <code class="docutils literal notranslate"><span class="pre">object</span></code> y se ha convertido a <code class="docutils literal notranslate"><span class="pre">datetime</span></code> para el análisis de series de tiempo.</p></li>
-<li><p><strong>Distribución de variables:</strong> Las variables de precio y volumen muestran distribuciones fuertemente sesgadas a la derecha, con un alto número de valores atípicos. Esto indica que la mayoría de los registros corresponden a precios y volúmenes bajos, con un subconjunto de valores extremadamente altos.</p></li>
-<li><p><strong>Correlación y tendencias:</strong> La matriz de correlación muestra una alta correlación entre las variables de precio, lo cual es esperado. El análisis de series de tiempo revela la volatilidad y las tendencias a largo plazo en los precios de las acciones de diferentes empresas.</p></li>
+<li><p>El dataset contiene [X] registros diarios de [Y] empresas durante 5 años</p></li>
+<li><p>Variables principales: Open, High, Low, Close, Volume</p></li>
+<li><p>Variables especiales: Dividends (presentes en [Z]% de registros), Stock Splits ([W]% de registros)</p></li>
+</ul>
+<p><strong>2. Distribuciones</strong>:</p>
+<ul class="simple">
+<li><p>Los precios muestran distribuciones similares con correlaciones &gt;0.99</p></li>
+<li><p>El volumen tiene distribución altamente asimétrica</p></li>
+<li><p>Dividendos y splits son eventos poco frecuentes</p></li>
+</ul>
+<p><strong>3. Valores Atípicos</strong>:</p>
+<ul class="simple">
+<li><p>Se identificaron [N] outliers en precios ([P]% del total)</p></li>
+<li><p>Concentrados principalmente en los años [años específicos]</p></li>
 </ul>
 </section>
 </section>
@@ -932,7 +1352,7 @@ Name: count, dtype: int64
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Presentación del Ejercicio</p>
+        <p class="prev-next-title">Primer entregable - Machine Learning</p>
       </div>
     </a>
 </div>
@@ -951,14 +1371,42 @@ Name: count, dtype: int64
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#informacion-del-dataset"><strong>Información del Dataset</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#librerias-y-conjunto-de-datos">Librerías y conjunto de datos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descripcion-y-estructura-del-dataset">2. Descripción y Estructura del Dataset</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-valores-faltantes">3. Análisis de Valores Faltantes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-la-distribucion-de-variables-clave">4. Análisis de la Distribución de Variables Clave</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-bivariado-y-de-series-de-tiempo">5. Análisis Bivariado y de Series de Tiempo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusiones-del-eda">6. Conclusiones del EDA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>1. Configuración Inicial</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vista-preeliminar"><strong>2.1. Vista Preeliminar</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metadatos-y-tipos-de-datos"><strong>2.2. Metadatos y Tipos de Datos</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estadisticas-descriptivas"><strong>2.3. Estadísticas Descriptivas</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-faltantes"><strong>2.4. Valores Faltantes</strong></a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-univariado-completo"><strong>3. Análisis Univariado Completo</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-numericas-precios-y-volumen"><strong>3.1. Variables Numéricas (Precios y Volumen)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histogramas-y-densidad"><strong>Histogramas y Densidad</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplots"><strong>Boxplots</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-volumen"><strong>Análisis de Volumen</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-especiales-dividendos-y-splits"><strong>3.2. Variables Especiales (Dividendos y Splits)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-dividendos"><strong>Análisis de Dividendos</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-stock-splits"><strong>Análisis de Stock Splits</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-categorica-company"><strong>3.3. Variable Categórica (Company)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-multivariado-completo"><strong>4. Análisis Multivariado Completo</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlaciones-entre-variables"><strong>4.1. Correlaciones entre Variables</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-valores-atipicos"><strong>5. Análisis de Valores Atípicos</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deteccion-con-metodo-estadistico"><strong>5.1. Detección con Método Estadístico</strong></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusiones-y-recomendaciones"><strong>6. Conclusiones y Recomendaciones</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hallazgos-clave"><strong>Hallazgos Clave</strong></a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

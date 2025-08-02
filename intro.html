@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Presentación del Ejercicio &#8212; Entregable - Eda</title>
+    <title>Primer entregable - Machine Learning &#8212; Entregable - Eda</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Desarrollo del análisis exploratorio" href="notebooks.html" />
+    <link rel="next" title="1. Configuración Inicial" href="notebooks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -176,12 +176,16 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Presentación del Ejercicio
+                    Primer entregable - Machine Learning
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html"><strong>Desarrollo del análisis exploratorio</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html"><strong>1. Configuración Inicial</strong></a></li>
+
+
+
+
 </ul>
 
     </div>
@@ -367,7 +371,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Presentación del Ejercicio</h1>
+    <h1>Primer entregable - Machine Learning</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -377,8 +381,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrantes-del-equipo"><strong>Integrantes del Equipo</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descripcion-del-ejercicio"><strong>Descripción del ejercicio</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrantes-del-equipo">Integrantes del Equipo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#presentacion-del-ejercicio">Presentación del Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#informacion-del-dataset">Información del Dataset</a></li>
 </ul>
             </nav>
         </div>
@@ -390,23 +395,45 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="presentacion-del-ejercicio">
-<h1>Presentación del Ejercicio<a class="headerlink" href="#presentacion-del-ejercicio" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="primer-entregable-machine-learning">
+<h1>Primer entregable - Machine Learning<a class="headerlink" href="#primer-entregable-machine-learning" title="Link to this heading">#</a></h1>
 <section id="integrantes-del-equipo">
-<h2><strong>Integrantes del Equipo</strong><a class="headerlink" href="#integrantes-del-equipo" title="Link to this heading">#</a></h2>
+<h2>Integrantes del Equipo<a class="headerlink" href="#integrantes-del-equipo" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>[Johan David Diaz Lopez]</p></li>
-<li><p>[Luis David Peñaranda Perez]</p></li>
-<li><p>[Hector David Sanjuan Fabregas]</p></li>
-<li><p>[Miguel Angel Lugo Cozzarelli]</p></li>
+<li><p>Johan David Diaz Lopez</p></li>
+<li><p>Luis David Peñaranda Perez</p></li>
+<li><p>Hector David Sanjuan Fabregas</p></li>
+<li><p>Miguel Angel Lugo Cozzarelli</p></li>
 </ul>
 </section>
-<section id="descripcion-del-ejercicio">
-<h2><strong>Descripción del ejercicio</strong><a class="headerlink" href="#descripcion-del-ejercicio" title="Link to this heading">#</a></h2>
+<section id="presentacion-del-ejercicio">
+<h2>Presentación del Ejercicio<a class="headerlink" href="#presentacion-del-ejercicio" title="Link to this heading">#</a></h2>
 <p>En este ejercicio tenemos como objetivo realizar un <strong>Análisis Exploratorio de Datos (EDA)</strong> sobre un dataset histórico de los precios de las acciones de las 500 empresas más grandes por capitalización de mercado. Nuestro objetivo es entender la estructura, calidad y patrones del conjunto de datos.</p>
+</section>
+<section id="informacion-del-dataset">
+<h2>Información del Dataset<a class="headerlink" href="#informacion-del-dataset" title="Link to this heading">#</a></h2>
+<p><strong>Título:</strong> Precios de las acciones de las 500 empresas más grandes por capitalización de mercado (últimos 5 años)</p>
+<p><strong>Fuente:</strong> Datos históricos extraídos de Yahoo Finance.</p>
+<p><strong>Resumen:</strong> El conjunto de datos comprende registros diarios de métricas de rendimiento de acciones para las 500 principales empresas a lo largo de un período de cinco años.</p>
+<p><strong>Variables de Dataset:</strong></p>
+<ul class="simple">
+<li><p><strong>Fecha:</strong> Fecha del registro bursátil.</p></li>
+<li><p><strong>Abrir:</strong> Precio de apertura de la acción.</p></li>
+<li><p><strong>Alto:</strong> Precio más alto del día.</p></li>
+<li><p><strong>Bajo:</strong> Precio más bajo del día.</p></li>
+<li><p><strong>Cerrar:</strong> Precio de cierre de la acción.</p></li>
+<li><p><strong>Volumen:</strong> Volumen de acciones negociadas.</p></li>
+<li><p><strong>Dividendos:</strong> Pagos de dividendos (si aplica).</p></li>
+<li><p><strong>Divisiones de acciones:</strong> Información sobre divisiones de acciones (si aplica).</p></li>
+<li><p><strong>Compañía:</strong> Símbolo de cotización de la empresa.</p></li>
+</ul>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html"><strong>Desarrollo del análisis exploratorio</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html"><strong>1. Configuración Inicial</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html#analisis-univariado-completo"><strong>3. Análisis Univariado Completo</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html#analisis-multivariado-completo"><strong>4. Análisis Multivariado Completo</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html#analisis-de-valores-atipicos"><strong>5. Análisis de Valores Atípicos</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html#conclusiones-y-recomendaciones"><strong>6. Conclusiones y Recomendaciones</strong></a></li>
 </ul>
 </div>
 </section>
@@ -447,7 +474,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Desarrollo del análisis exploratorio</strong></p>
+        <p class="prev-next-title"><strong>1. Configuración Inicial</strong></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -467,8 +494,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrantes-del-equipo"><strong>Integrantes del Equipo</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descripcion-del-ejercicio"><strong>Descripción del ejercicio</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrantes-del-equipo">Integrantes del Equipo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#presentacion-del-ejercicio">Presentación del Ejercicio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#informacion-del-dataset">Información del Dataset</a></li>
 </ul>
   </nav></div>
 
