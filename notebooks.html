@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. Configuración Inicial &#8212; Entregable - Eda</title>
+    <title>Analisis Exploratorio de Datos &#8212; Entregable - Eda</title>
   
   
   
@@ -179,12 +179,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>1. Configuración Inicial</strong></a></li>
-
-
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Analisis Exploratorio de Datos</a></li>
 </ul>
 
     </div>
@@ -370,7 +365,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>1. Configuración Inicial</h1>
+    <h1>Analisis Exploratorio de Datos</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,43 +375,42 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>1. Configuración Inicial</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-inicial-del-dataset"><strong>2. Análisis Inicial del Dataset</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vista-preeliminar"><strong>2.1. Vista Preeliminar</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metadatos-y-tipos-de-datos"><strong>2.2. Metadatos y Tipos de Datos</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estadisticas-descriptivas"><strong>2.3. Estadísticas Descriptivas</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-faltantes"><strong>2.4. Valores Faltantes</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuracion-inicial"><strong>1. Configuración Inicial</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-inicial-del-dataset"><strong>2. Análisis Inicial del Dataset</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vista-preeliminar"><strong>2.1. Vista Preeliminar</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadatos-y-tipos-de-datos"><strong>2.2. Metadatos y Tipos de Datos</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estadisticas-descriptivas"><strong>2.3. Estadísticas Descriptivas</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-faltantes"><strong>2.4. Valores Faltantes</strong></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-univariado-completo"><strong>3. Análisis Univariado Completo</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-numericas-precios-y-volumen"><strong>3.1. Variables Numéricas (Precios y Volumen)</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histogramas-y-densidad"><strong>Histogramas y Densidad</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplots"><strong>Boxplots</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-volumen"><strong>Análisis de Volumen</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-univariado-completo"><strong>3. Análisis Univariado Completo</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-numericas-precios-y-volumen"><strong>3.1. Variables Numéricas (Precios y Volumen)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#histogramas-y-densidad"><strong>Histogramas y Densidad</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplots"><strong>Boxplots</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-volumen"><strong>Análisis de Volumen</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-especiales-dividendos-y-splits"><strong>3.2. Variables Especiales (Dividendos y Splits)</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-dividendos"><strong>Análisis de Dividendos</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-stock-splits"><strong>Análisis de Stock Splits</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-especiales-dividendos-y-splits"><strong>3.2. Variables Especiales (Dividendos y Splits)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-dividendos"><strong>Análisis de Dividendos</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-stock-splits"><strong>Análisis de Stock Splits</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-categorica-company"><strong>3.3. Variable Categórica (Company)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-categorica-company"><strong>3.3. Variable Categórica (Company)</strong></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-multivariado-completo"><strong>4. Análisis Multivariado Completo</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlaciones-entre-variables"><strong>4.1. Correlaciones entre Variables</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-multivariado-completo"><strong>4. Análisis Multivariado Completo</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correlaciones-entre-variables"><strong>4.1. Correlaciones entre Variables</strong></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-valores-atipicos"><strong>5. Análisis de Valores Atípicos</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deteccion-con-metodo-estadistico"><strong>5.1. Detección con Método Estadístico</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-valores-atipicos"><strong>5. Análisis de Valores Atípicos</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteccion-con-metodo-estadistico"><strong>5.1. Detección con Método Estadístico</strong></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusiones-y-recomendaciones"><strong>6. Conclusiones y Recomendaciones</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hallazgos-clave"><strong>Hallazgos Clave</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusiones-y-recomendaciones"><strong>6. Conclusiones y Recomendaciones</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hallazgos-clave"><strong>Hallazgos Clave</strong></a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -427,9 +421,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>Analisis Exploratorio de Datos</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="analisis-exploratorio-de-datos">
+<h1>Analisis Exploratorio de Datos<a class="headerlink" href="#analisis-exploratorio-de-datos" title="Link to this heading">#</a></h1>
 <section id="configuracion-inicial">
-<h1><strong>1. Configuración Inicial</strong><a class="headerlink" href="#configuracion-inicial" title="Link to this heading">#</a></h1>
+<h2><strong>1. Configuración Inicial</strong><a class="headerlink" href="#configuracion-inicial" title="Link to this heading">#</a></h2>
 <p><strong>Propósito</strong>: Preparar el entorno de análisis importando las librerías necesarias y configurando parámetros de visualización.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -458,7 +453,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\AppData\Local\Temp\ipykernel_17196\3386856796.py:9: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as &#39;seaborn-v0_8-&lt;style&gt;&#39;. Alternatively, directly use the seaborn API instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\AppData\Local\Temp\ipykernel_1628\3386856796.py:9: MatplotlibDeprecationWarning: The seaborn styles shipped by Matplotlib are deprecated since 3.6, as they no longer correspond to the styles shipped by seaborn. However, they will remain available as &#39;seaborn-v0_8-&lt;style&gt;&#39;. Alternatively, directly use the seaborn API instead.
   plt.style.use(&#39;seaborn&#39;)
 </pre></div>
 </div>
@@ -470,10 +465,10 @@ document.write(`
 </div>
 </section>
 <section id="analisis-inicial-del-dataset">
-<h1><strong>2. Análisis Inicial del Dataset</strong><a class="headerlink" href="#analisis-inicial-del-dataset" title="Link to this heading">#</a></h1>
+<h2><strong>2. Análisis Inicial del Dataset</strong><a class="headerlink" href="#analisis-inicial-del-dataset" title="Link to this heading">#</a></h2>
 <p><strong>Propósito</strong>: Realizar una primera exploración para entender la estructura básica, tipos de datos y completitud de la información.</p>
 <section id="vista-preeliminar">
-<h2><strong>2.1. Vista Preeliminar</strong><a class="headerlink" href="#vista-preeliminar" title="Link to this heading">#</a></h2>
+<h3><strong>2.1. Vista Preeliminar</strong><a class="headerlink" href="#vista-preeliminar" title="Link to this heading">#</a></h3>
 <p><strong>Objetivo</strong>: Examinar las primeras y últimas filas para identificar formato y contenido.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -632,7 +627,7 @@ document.write(`
 </div>
 </section>
 <section id="metadatos-y-tipos-de-datos">
-<h2><strong>2.2. Metadatos y Tipos de Datos</strong><a class="headerlink" href="#metadatos-y-tipos-de-datos" title="Link to this heading">#</a></h2>
+<h3><strong>2.2. Metadatos y Tipos de Datos</strong><a class="headerlink" href="#metadatos-y-tipos-de-datos" title="Link to this heading">#</a></h3>
 <p><strong>Objetivo</strong>: Verificar la estructura de los datos y tipos de variables.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -668,7 +663,7 @@ memory usage: 41.4+ MB
 </div>
 </section>
 <section id="estadisticas-descriptivas">
-<h2><strong>2.3. Estadísticas Descriptivas</strong><a class="headerlink" href="#estadisticas-descriptivas" title="Link to this heading">#</a></h2>
+<h3><strong>2.3. Estadísticas Descriptivas</strong><a class="headerlink" href="#estadisticas-descriptivas" title="Link to this heading">#</a></h3>
 <p><strong>Objetivo</strong>: Obtener medidas estadísticas básicas para todas las variables numéricas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -840,7 +835,7 @@ memory usage: 41.4+ MB
 </div>
 </section>
 <section id="valores-faltantes">
-<h2><strong>2.4. Valores Faltantes</strong><a class="headerlink" href="#valores-faltantes" title="Link to this heading">#</a></h2>
+<h3><strong>2.4. Valores Faltantes</strong><a class="headerlink" href="#valores-faltantes" title="Link to this heading">#</a></h3>
 <p><strong>Objetivo</strong>: Cuantificar y analizar datos faltantes en el dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -889,10 +884,10 @@ memory usage: 41.4+ MB
 </section>
 </section>
 <section id="analisis-univariado-completo">
-<h1><strong>3. Análisis Univariado Completo</strong><a class="headerlink" href="#analisis-univariado-completo" title="Link to this heading">#</a></h1>
+<h2><strong>3. Análisis Univariado Completo</strong><a class="headerlink" href="#analisis-univariado-completo" title="Link to this heading">#</a></h2>
 <p><strong>Propósito</strong>: Analizar en profundidad cada variable individualmente.</p>
 <section id="variables-numericas-precios-y-volumen">
-<h2><strong>3.1. Variables Numéricas (Precios y Volumen)</strong><a class="headerlink" href="#variables-numericas-precios-y-volumen" title="Link to this heading">#</a></h2>
+<h3><strong>3.1. Variables Numéricas (Precios y Volumen)</strong><a class="headerlink" href="#variables-numericas-precios-y-volumen" title="Link to this heading">#</a></h3>
 <p><strong>Objetivo</strong>: Examinar distribuciones, tendencia central y dispersión.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -904,7 +899,7 @@ memory usage: 41.4+ MB
 </div>
 </div>
 <section id="histogramas-y-densidad">
-<h3><strong>Histogramas y Densidad</strong><a class="headerlink" href="#histogramas-y-densidad" title="Link to this heading">#</a></h3>
+<h4><strong>Histogramas y Densidad</strong><a class="headerlink" href="#histogramas-y-densidad" title="Link to this heading">#</a></h4>
 <p><strong>Propósito</strong>: Visualizar la distribución de frecuencias de cada variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -954,7 +949,7 @@ C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:111
 </div>
 </section>
 <section id="boxplots">
-<h3><strong>Boxplots</strong><a class="headerlink" href="#boxplots" title="Link to this heading">#</a></h3>
+<h4><strong>Boxplots</strong><a class="headerlink" href="#boxplots" title="Link to this heading">#</a></h4>
 <p><strong>Propósito</strong>: Identificar valores atípicos y rango intercuartílico.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -986,7 +981,7 @@ C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:149
 </div>
 </section>
 <section id="analisis-de-volumen">
-<h3><strong>Análisis de Volumen</strong><a class="headerlink" href="#analisis-de-volumen" title="Link to this heading">#</a></h3>
+<h4><strong>Análisis de Volumen</strong><a class="headerlink" href="#analisis-de-volumen" title="Link to this heading">#</a></h4>
 <p><strong>Propósito</strong>: Examinar la distribución del volumen de operaciones.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1028,10 +1023,10 @@ C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:111
 </section>
 </section>
 <section id="variables-especiales-dividendos-y-splits">
-<h2><strong>3.2. Variables Especiales (Dividendos y Splits)</strong><a class="headerlink" href="#variables-especiales-dividendos-y-splits" title="Link to this heading">#</a></h2>
+<h3><strong>3.2. Variables Especiales (Dividendos y Splits)</strong><a class="headerlink" href="#variables-especiales-dividendos-y-splits" title="Link to this heading">#</a></h3>
 <p><strong>Objetivo</strong>: Analizar eventos corporativos poco frecuentes.</p>
 <section id="analisis-de-dividendos">
-<h3><strong>Análisis de Dividendos</strong><a class="headerlink" href="#analisis-de-dividendos" title="Link to this heading">#</a></h3>
+<h4><strong>Análisis de Dividendos</strong><a class="headerlink" href="#analisis-de-dividendos" title="Link to this heading">#</a></h4>
 <p><strong>Propósito</strong>: Examinar distribución y frecuencia de pagos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1065,7 +1060,7 @@ C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:111
 </div>
 </section>
 <section id="analisis-de-stock-splits">
-<h3><strong>Análisis de Stock Splits</strong><a class="headerlink" href="#analisis-de-stock-splits" title="Link to this heading">#</a></h3>
+<h4><strong>Análisis de Stock Splits</strong><a class="headerlink" href="#analisis-de-stock-splits" title="Link to this heading">#</a></h4>
 <p><strong>Propósito</strong>: Evaluar frecuencia y magnitud de splits.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1083,16 +1078,14 @@ C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:111
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📊 Análisis de Stock Splits:
 Total de registros con splits: 71
 Porcentaje de registros con splits: 0.01%
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
   with pd.option_context(&#39;mode.use_inf_as_na&#39;, True):
 </pre></div>
 </div>
@@ -1102,7 +1095,7 @@ Porcentaje de registros con splits: 0.01%
 </section>
 </section>
 <section id="variable-categorica-company">
-<h2><strong>3.3. Variable Categórica (Company)</strong><a class="headerlink" href="#variable-categorica-company" title="Link to this heading">#</a></h2>
+<h3><strong>3.3. Variable Categórica (Company)</strong><a class="headerlink" href="#variable-categorica-company" title="Link to this heading">#</a></h3>
 <p><strong>Objetivo</strong>: Analizar distribución de empresas en el dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1161,10 +1154,10 @@ C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:149
 </section>
 </section>
 <section id="analisis-multivariado-completo">
-<h1><strong>4. Análisis Multivariado Completo</strong><a class="headerlink" href="#analisis-multivariado-completo" title="Link to this heading">#</a></h1>
+<h2><strong>4. Análisis Multivariado Completo</strong><a class="headerlink" href="#analisis-multivariado-completo" title="Link to this heading">#</a></h2>
 <p><strong>Propósito</strong>: Explorar relaciones entre múltiples variables.</p>
 <section id="correlaciones-entre-variables">
-<h2><strong>4.1. Correlaciones entre Variables</strong><a class="headerlink" href="#correlaciones-entre-variables" title="Link to this heading">#</a></h2>
+<h3><strong>4.1. Correlaciones entre Variables</strong><a class="headerlink" href="#correlaciones-entre-variables" title="Link to this heading">#</a></h3>
 <p><strong>Objetivo</strong>: Identificar relaciones lineales entre variables numéricas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1192,10 +1185,10 @@ C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:149
 </section>
 </section>
 <section id="analisis-de-valores-atipicos">
-<h1><strong>5. Análisis de Valores Atípicos</strong><a class="headerlink" href="#analisis-de-valores-atipicos" title="Link to this heading">#</a></h1>
+<h2><strong>5. Análisis de Valores Atípicos</strong><a class="headerlink" href="#analisis-de-valores-atipicos" title="Link to this heading">#</a></h2>
 <p><strong>Propósito</strong>: Identificar y evaluar valores extremos en el dataset.</p>
 <section id="deteccion-con-metodo-estadistico">
-<h2><strong>5.1. Detección con Método Estadístico</strong><a class="headerlink" href="#deteccion-con-metodo-estadistico" title="Link to this heading">#</a></h2>
+<h3><strong>5.1. Detección con Método Estadístico</strong><a class="headerlink" href="#deteccion-con-metodo-estadistico" title="Link to this heading">#</a></h3>
 <p><strong>Objetivo</strong>: Usar el rango intercuartílico (IQR) para identificar outliers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1301,10 +1294,10 @@ C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:149
 </section>
 </section>
 <section id="conclusiones-y-recomendaciones">
-<h1><strong>6. Conclusiones y Recomendaciones</strong><a class="headerlink" href="#conclusiones-y-recomendaciones" title="Link to this heading">#</a></h1>
+<h2><strong>6. Conclusiones y Recomendaciones</strong><a class="headerlink" href="#conclusiones-y-recomendaciones" title="Link to this heading">#</a></h2>
 <p><strong>Propósito</strong>: Sintetizar hallazgos clave y sugerir próximos pasos.</p>
 <section id="hallazgos-clave">
-<h2><strong>Hallazgos Clave</strong><a class="headerlink" href="#hallazgos-clave" title="Link to this heading">#</a></h2>
+<h3><strong>Hallazgos Clave</strong><a class="headerlink" href="#hallazgos-clave" title="Link to this heading">#</a></h3>
 <p><strong>1. Estructura del Dataset</strong>:</p>
 <ul class="simple">
 <li><p>El dataset contiene [X] registros diarios de [Y] empresas durante 5 años</p></li>
@@ -1322,6 +1315,7 @@ C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:149
 <li><p>Se identificaron [N] outliers en precios ([P]% del total)</p></li>
 <li><p>Concentrados principalmente en los años [años específicos]</p></li>
 </ul>
+</section>
 </section>
 </section>
 
@@ -1380,43 +1374,42 @@ C:\Users\johan\miniconda3\envs\ml_venv\lib\site-packages\seaborn\_oldcore.py:149
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>1. Configuración Inicial</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-inicial-del-dataset"><strong>2. Análisis Inicial del Dataset</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vista-preeliminar"><strong>2.1. Vista Preeliminar</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metadatos-y-tipos-de-datos"><strong>2.2. Metadatos y Tipos de Datos</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estadisticas-descriptivas"><strong>2.3. Estadísticas Descriptivas</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-faltantes"><strong>2.4. Valores Faltantes</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuracion-inicial"><strong>1. Configuración Inicial</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-inicial-del-dataset"><strong>2. Análisis Inicial del Dataset</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vista-preeliminar"><strong>2.1. Vista Preeliminar</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadatos-y-tipos-de-datos"><strong>2.2. Metadatos y Tipos de Datos</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estadisticas-descriptivas"><strong>2.3. Estadísticas Descriptivas</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valores-faltantes"><strong>2.4. Valores Faltantes</strong></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-univariado-completo"><strong>3. Análisis Univariado Completo</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-numericas-precios-y-volumen"><strong>3.1. Variables Numéricas (Precios y Volumen)</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histogramas-y-densidad"><strong>Histogramas y Densidad</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplots"><strong>Boxplots</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-volumen"><strong>Análisis de Volumen</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-univariado-completo"><strong>3. Análisis Univariado Completo</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-numericas-precios-y-volumen"><strong>3.1. Variables Numéricas (Precios y Volumen)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#histogramas-y-densidad"><strong>Histogramas y Densidad</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplots"><strong>Boxplots</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-volumen"><strong>Análisis de Volumen</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-especiales-dividendos-y-splits"><strong>3.2. Variables Especiales (Dividendos y Splits)</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-dividendos"><strong>Análisis de Dividendos</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-stock-splits"><strong>Análisis de Stock Splits</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-especiales-dividendos-y-splits"><strong>3.2. Variables Especiales (Dividendos y Splits)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-dividendos"><strong>Análisis de Dividendos</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-stock-splits"><strong>Análisis de Stock Splits</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-categorica-company"><strong>3.3. Variable Categórica (Company)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-categorica-company"><strong>3.3. Variable Categórica (Company)</strong></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-multivariado-completo"><strong>4. Análisis Multivariado Completo</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlaciones-entre-variables"><strong>4.1. Correlaciones entre Variables</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-multivariado-completo"><strong>4. Análisis Multivariado Completo</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correlaciones-entre-variables"><strong>4.1. Correlaciones entre Variables</strong></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-valores-atipicos"><strong>5. Análisis de Valores Atípicos</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deteccion-con-metodo-estadistico"><strong>5.1. Detección con Método Estadístico</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-de-valores-atipicos"><strong>5. Análisis de Valores Atípicos</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteccion-con-metodo-estadistico"><strong>5.1. Detección con Método Estadístico</strong></a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusiones-y-recomendaciones"><strong>6. Conclusiones y Recomendaciones</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hallazgos-clave"><strong>Hallazgos Clave</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusiones-y-recomendaciones"><strong>6. Conclusiones y Recomendaciones</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hallazgos-clave"><strong>Hallazgos Clave</strong></a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
